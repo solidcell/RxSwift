@@ -59,6 +59,22 @@ extension UITabBar_RxTests {
         XCTAssertEqual(returnedItems, items)
     }
 
+    func testDidBeginCustomizingItems() {
+        let subject = createSubject()
+
+        let items = [UITabBarItem()]
+        var returnedItems: [UITabBarItem]!
+
+        _ = subject.rx_didBeginCustomizingItems
+            .subscribeNext { i in
+                returnedItems = i
+            }
+
+        subject.delegate!.tabBar!(subject, didBeginCustomizingItems: items)
+
+        XCTAssertEqual(returnedItems, items)
+    }
+
 }
 #endif
 

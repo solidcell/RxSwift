@@ -50,6 +50,18 @@ extension UITabBar {
         return ControlEvent(events: source)
     }
 
+    /**
+     Reactive wrapper for `delegate` message `tabBar:didBeginCustomizingItems:`.
+    */
+    public var rx_didBeginCustomizingItems: ControlEvent<[UITabBarItem]> {
+        let source = rx_delegate.observe(#selector(UITabBarDelegate.tabBar(_:didBeginCustomizingItems:)))
+            .map { a in
+                return try castOrThrow([UITabBarItem].self, a[1])
+            }
+
+        return ControlEvent(events: source)
+    }
+
 }
 #endif
 
