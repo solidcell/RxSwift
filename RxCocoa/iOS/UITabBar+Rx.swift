@@ -168,6 +168,18 @@ extension UITabBar {
         }.asObserver()
     }
 
+    /**
+     Reactive wrapper for `delegate` message `tabBar:didSelectItem:`.
+    */
+    public var rx_didSelectItem: ControlEvent<UITabBarItem> {
+        let source = rx_delegate.observe(#selector(UITabBarDelegate.tabBar(_:didSelectItem:)))
+            .map { a in
+                return try castOrThrow(UITabBarItem.self, a[1])
+            }
+
+        return ControlEvent(events: source)
+    }
+
 }
 
 #endif

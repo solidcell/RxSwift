@@ -174,6 +174,22 @@ extension UITabBar_RxTests {
         XCTAssertEqual(subject.selectionIndicatorImage, image)
     }
 
+    func testDidSelectItem() {
+        let subject = createSubject()
+
+        let item = UITabBarItem()
+        var returnedItem: UITabBarItem!
+
+        _ = subject.rx_didSelectItem
+            .subscribeNext { i in
+                returnedItem = i
+            }
+
+        subject.delegate!.tabBar!(subject, didSelectItem: item)
+
+        XCTAssertEqual(returnedItem, item)
+    }
+
 }
 
 #endif
