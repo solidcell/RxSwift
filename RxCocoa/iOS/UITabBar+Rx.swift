@@ -38,6 +38,18 @@ extension UITabBar {
         }.asObserver()
     }
 
+    /**
+     Reactive wrapper for `delegate` message `tabBar:willBeginCustomizingItems:`.
+    */
+    public var rx_willBeginCustomizingItems: ControlEvent<[UITabBarItem]> {
+        let source = rx_delegate.observe(#selector(UITabBarDelegate.tabBar(_:willBeginCustomizingItems:)))
+            .map { a in
+                return try castOrThrow([UITabBarItem].self, a[1])
+            }
+
+        return ControlEvent(events: source)
+    }
+
 }
 #endif
 
@@ -46,6 +58,24 @@ extension UITabBar {
  */
 extension UITabBar {
     
+    /**
+     Factory method that enables subclasses to implement their own `rx_delegate`.
+
+     - returns: Instance of delegate proxy that wraps `delegate`.
+     */
+    public func rx_createDelegateProxy() -> RxTabBarDelegateProxy {
+        return RxTabBarDelegateProxy(parentObject: self)
+    }
+
+    /**
+     Reactive wrapper for `delegate`.
+
+     For more information take a look at `DelegateProxyType` protocol documentation.
+    */
+    public var rx_delegate: DelegateProxy {
+        return RxTabBarDelegateProxy.proxyForObject(self)
+    }
+
     /**
      Bindable sink for `items` property.
      */

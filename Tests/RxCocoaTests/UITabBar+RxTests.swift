@@ -43,6 +43,22 @@ extension UITabBar_RxTests {
         XCTAssertEqual(subject.itemPositioning, UITabBarItemPositioning.Fill)
     }
 
+    func testWillBeginCustomizingItems() {
+        let subject = createSubject()
+
+        let items = [UITabBarItem()]
+        var returnedItems: [UITabBarItem]!
+
+        _ = subject.rx_willBeginCustomizingItems
+            .subscribeNext { i in
+                returnedItems = i
+            }
+
+        subject.delegate!.tabBar!(subject, willBeginCustomizingItems: items)
+
+        XCTAssertEqual(returnedItems, items)
+    }
+
 }
 #endif
 
