@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Observable Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Observable" class="dashAnchor"></a>
+    <a title="Observable Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RxSwift Docs</a> (97% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RxSwift Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Observable Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AnonymousDisposable.html">AnonymousDisposable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BehaviorSubject.html">BehaviorSubject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BinaryDisposable.html">BinaryDisposable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BooleanDisposable.html">BooleanDisposable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CompositeDisposable.html">CompositeDisposable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcurrentDispatchQueueScheduler.html">ConcurrentDispatchQueueScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcurrentMainScheduler.html">ConcurrentMainScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConnectableObservable.html">ConnectableObservable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CurrentThreadScheduler.html">CurrentThreadScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DisposeBag.html">DisposeBag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:C7RxSwift11DisposeBase">DisposeBase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Expectation.html">Expectation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HistoricalScheduler.html">HistoricalScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MainScheduler.html">MainScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Observable.html">Observable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OperationQueueScheduler.html">OperationQueueScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PublishSubject.html">PublishSubject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RefCountDisposable.html">RefCountDisposable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReplaySubject.html">ReplaySubject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ScheduledDisposable.html">ScheduledDisposable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SerialDispatchQueueScheduler.html">SerialDispatchQueueScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SerialDisposable.html">SerialDisposable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SingleAssignmentDisposable.html">SingleAssignmentDisposable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StableCompositeDisposable.html">StableCompositeDisposable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Variable.html">Variable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VirtualTimeScheduler.html">VirtualTimeScheduler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/DISPATCH_QUEUE_PRIORITY_DEFAULT">DISPATCH_QUEUE_PRIORITY_DEFAULT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/DISPATCH_QUEUE_PRIORITY_HIGH">DISPATCH_QUEUE_PRIORITY_HIGH</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/DISPATCH_QUEUE_PRIORITY_LOW">DISPATCH_QUEUE_PRIORITY_LOW</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/DISPATCH_QUEUE_SERIAL">DISPATCH_QUEUE_SERIAL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/DISPATCH_SOURCE_TYPE_TIMER">DISPATCH_SOURCE_TYPE_TIMER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/DISPATCH_TIME_FOREVER">DISPATCH_TIME_FOREVER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/DISPATCH_TIME_NOW">DISPATCH_TIME_NOW</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/NSEC_PER_SEC">NSEC_PER_SEC</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/QOS_CLASS_BACKGROUND">QOS_CLASS_BACKGROUND</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/QOS_CLASS_DEFAULT">QOS_CLASS_DEFAULT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/QOS_CLASS_USER_INITIATED">QOS_CLASS_USER_INITIATED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/QOS_CLASS_USER_INTERACTIVE">QOS_CLASS_USER_INTERACTIVE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/QOS_CLASS_UTILITY">QOS_CLASS_UTILITY</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/kCFRunLoopDefaultMode">kCFRunLoopDefaultMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v7RxSwift29maxTailRecursiveSinkStackSizeSi">maxTailRecursiveSinkStackSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/numberOfMapOperators">numberOfMapOperators</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/numberOfSerialDispatchQueueObservables">numberOfSerialDispatchQueueObservables</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/resourceCount">resourceCount</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/DispatchQueueSchedulerQOS.html">DispatchQueueSchedulerQOS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Event.html">Event</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RxError.html">RxError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VirtualTimeComparison.html">VirtualTimeComparison</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CollectionType.html">CollectionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSThread.html">NSThread</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SequenceType.html">SequenceType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/XCTestCase.html">XCTestCase</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF7RxSwiftoi2eeFTVS_6BagKeyS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/CFRunLoopGetCurrent()">CFRunLoopGetCurrent()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/CFRunLoopPerformBlock(_:_:_:)">CFRunLoopPerformBlock(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/CFRunLoopRun()">CFRunLoopRun()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/CFRunLoopStop(_:)">CFRunLoopStop(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/CFRunLoopWakeUp(_:)">CFRunLoopWakeUp(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/dispatch_async(_:_:)">dispatch_async(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/dispatch_get_global_queue(_:_:)">dispatch_get_global_queue(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/dispatch_get_main_queue()">dispatch_get_main_queue()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/dispatch_queue_create(_:_:)">dispatch_queue_create(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/dispatch_resume(_:)">dispatch_resume(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/dispatch_set_target_queue(_:_:)">dispatch_set_target_queue(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/dispatch_source_cancel(_:)">dispatch_source_cancel(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/dispatch_source_create(_:_:_:_:)">dispatch_source_create(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/dispatch_source_set_event_handler(_:_:)">dispatch_source_set_event_handler(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/dispatch_source_set_timer(_:_:_:_:)">dispatch_source_set_timer(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/dispatch_time(_:_:)">dispatch_time(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RxSwift12disposeAllInFGVS_3BagPS_10Disposable__T_">disposeAllIn(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/objc_sync_enter(_:)">objc_sync_enter(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/objc_sync_exit(_:)">objc_sync_exit(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Cancelable.html">Cancelable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ConnectableObservableType.html">ConnectableObservableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Disposable.html">Disposable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImmediateSchedulerType.html">ImmediateSchedulerType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ObservableConvertibleType.html">ObservableConvertibleType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ObservableType.html">ObservableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ObserverType.html">ObserverType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SchedulerType.html">SchedulerType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SubjectType.html">SubjectType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VirtualTimeConverterType.html">VirtualTimeConverterType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AnyObserver.html">AnyObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Bag.html">Bag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BagKey.html">BagKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HistoricalSchedulerTimeConverter.html">HistoricalSchedulerTimeConverter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NopDisposable.html">NopDisposable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Queue.html">Queue</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:7RxSwift6RxTime">RxTime</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:7RxSwift14RxTimeInterval">RxTimeInterval</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Observable</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ObservableType</span></code></pre>
+
+                </div>
+              </div>
+            <p>A type-erased <code><a href="../Protocols/ObservableType.html">ObservableType</a></code>. </p>
+
+<p>It represents a push style sequence.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C7RxSwift10Observable1E"></a>
+                    <a name="//apple_ref/swift/Alias/E" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C7RxSwift10Observable1E">E</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Type of elements in sequence.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">E</span> <span class="o">=</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7RxSwift10Observable9subscribeuRd__S_12ObserverTypexzwd__1ErFqd__PS_10Disposable_"></a>
+                    <a name="//apple_ref/swift/Method/subscribe(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7RxSwift10Observable9subscribeuRd__S_12ObserverTypexzwd__1ErFqd__PS_10Disposable_">subscribe(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ObservableType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7RxSwift10Observable12asObservableFT_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/asObservable()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7RxSwift10Observable12asObservableFT_GS0_x_">asObservable()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ObservableType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/create"></a>
+                <a name="//apple_ref/swift/Section/create" class="dashAnchor"></a>
+                <a href="#/create">
+                  <h3 class="section-name">create</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable6createFFGVS_11AnyObserverx_PS_10Disposable_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/create(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable6createFFGVS_11AnyObserverx_PS_10Disposable_GS0_x_">create(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an observable sequence from a specified subscribe method implementation.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/create.html">create operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="nv">subscribe</span><span class="p">:</span> <span class="p">(</span><span class="kt">AnyObserver</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Disposable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subscribe</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Implementation of the resulting observable sequence&rsquo;s <code>subscribe</code> method.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The observable sequence with the specified implementation for the <code>subscribe</code> method.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/empty"></a>
+                <a name="//apple_ref/swift/Section/empty" class="dashAnchor"></a>
+                <a href="#/empty">
+                  <h3 class="section-name">empty</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable5emptyFT_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/empty()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable5emptyFT_GS0_x_">empty()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an empty observable sequence, using the specified scheduler to send out the single <code>Completed</code> message.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/empty-never-throw.html">empty operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">empty</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence with no elements.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/never"></a>
+                <a name="//apple_ref/swift/Section/never" class="dashAnchor"></a>
+                <a href="#/never">
+                  <h3 class="section-name">never</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable5neverFT_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/never()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable5neverFT_GS0_x_">never()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a non-terminating observable sequence, which can be used to denote an infinite duration.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/empty-never-throw.html">never operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">never</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence whose observers will never get called.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/just"></a>
+                <a name="//apple_ref/swift/Section/just" class="dashAnchor"></a>
+                <a href="#/just">
+                  <h3 class="section-name">just</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable4justFxGS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/just(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable4justFxGS0_x_">just(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an observable sequence that contains a single element.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/just.html">just operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">just</span><span class="p">(</span><span class="nv">element</span><span class="p">:</span> <span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>element</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Single element in the resulting observable sequence.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the single specified element.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable4justFTx9schedulerPS_22ImmediateSchedulerType__GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/just(_:scheduler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable4justFTx9schedulerPS_22ImmediateSchedulerType__GS0_x_">just(_:scheduler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an observable sequence that contains a single element.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/just.html">just operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">just</span><span class="p">(</span><span class="nv">element</span><span class="p">:</span> <span class="kt">E</span><span class="p">,</span> <span class="nv">scheduler</span><span class="p">:</span> <span class="kt">ImmediateSchedulerType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>element</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Single element in the resulting observable sequence.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the single specified element.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/fail"></a>
+                <a name="//apple_ref/swift/Section/fail" class="dashAnchor"></a>
+                <a href="#/fail">
+                  <h3 class="section-name">fail</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable5errorFPs9ErrorType_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/error(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable5errorFPs9ErrorType_GS0_x_">error(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an observable sequence that terminates with an <code>error</code>.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/empty-never-throw.html">throw operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">error</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">ErrorType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The observable sequence that terminates with specified error.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/of"></a>
+                <a name="//apple_ref/swift/Section/of" class="dashAnchor"></a>
+                <a href="#/of">
+                  <h3 class="section-name">of</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable2ofFTGSax_9schedulerGSqPS_22ImmediateSchedulerType___GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/of(_:scheduler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable2ofFTGSax_9schedulerGSqPS_22ImmediateSchedulerType___GS0_x_">of(_:scheduler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method creates a new Observable instance with a variable number of elements.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/from.html">from operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">of</span><span class="p">(</span><span class="nv">elements</span><span class="p">:</span> <span class="kt">E</span> <span class="o">...</span><span class="p">,</span> <span class="nv">scheduler</span><span class="p">:</span> <span class="kt">ImmediateSchedulerType</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>elements</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Elements to generate.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scheduler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Scheduler to send elements on. If <code>nil</code>, elements are sent immediatelly on subscription.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The observable sequence whose elements are pulled from the given arguments.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/defer"></a>
+                <a name="//apple_ref/swift/Section/defer" class="dashAnchor"></a>
+                <a href="#/defer">
+                  <h3 class="section-name">defer</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable8deferredFFzT_GS0_x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/deferred(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable8deferredFFzT_GS0_x_GS0_x_">deferred(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an observable sequence that invokes the specified factory function whenever a new observer subscribes.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/defer.html">defer operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">deferred</span><span class="p">(</span><span class="nv">observableFactory</span><span class="p">:</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>observableFactory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Observable factory function to invoke for each observer that subscribes to the resulting sequence.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence whose observers trigger an invocation of the given observable factory function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable8generateFT12initialStatex9conditionFzxSb9schedulerPS_22ImmediateSchedulerType_7iterateFzxx_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/generate(initialState:condition:scheduler:iterate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable8generateFT12initialStatex9conditionFzxSb9schedulerPS_22ImmediateSchedulerType_7iterateFzxx_GS0_x_">generate(initialState:condition:scheduler:iterate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Generates an observable sequence by running a state-driven loop producing the sequence&rsquo;s elements, using the specified scheduler
+to run the loop send out observer messages.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/create.html">create operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">generate</span><span class="p">(</span><span class="n">initialState</span> <span class="nv">initialState</span><span class="p">:</span> <span class="kt">E</span><span class="p">,</span> <span class="nv">condition</span><span class="p">:</span> <span class="kt">E</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">scheduler</span><span class="p">:</span> <span class="kt">ImmediateSchedulerType</span> <span class="o">=</span> <span class="kt">CurrentThreadScheduler</span><span class="o">.</span><span class="n">instance</span><span class="p">,</span> <span class="nv">iterate</span><span class="p">:</span> <span class="kt">E</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>initialState</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial state.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>condition</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Condition to terminate generation (upon returning <code>false</code>).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>iterate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Iteration step function.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scheduler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Scheduler on which to run the generator loop.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The generated sequence.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable13repeatElementFTx9schedulerPS_22ImmediateSchedulerType__GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/repeatElement(_:scheduler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable13repeatElementFTx9schedulerPS_22ImmediateSchedulerType__GS0_x_">repeatElement(_:scheduler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Generates an observable sequence that repeats the given element infinitely, using the specified scheduler to send out observer messages.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/repeat.html">repeat operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">repeatElement</span><span class="p">(</span><span class="nv">element</span><span class="p">:</span> <span class="kt">E</span><span class="p">,</span> <span class="nv">scheduler</span><span class="p">:</span> <span class="kt">ImmediateSchedulerType</span> <span class="o">=</span> <span class="kt">CurrentThreadScheduler</span><span class="o">.</span><span class="n">instance</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>element</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Element to repeat.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scheduler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Scheduler to run the producer loop on.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence that repeats the given element infinitely.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable5usinguRd__S_10DisposablerFTFzT_qd__17observableFactoryFzqd__GS0_x__GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/using(_:observableFactory:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable5usinguRd__S_10DisposablerFTFzT_qd__17observableFactoryFzqd__GS0_x__GS0_x_">using(_:observableFactory:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constructs an observable sequence that depends on a resource object, whose lifetime is tied to the resulting observable sequence&rsquo;s lifetime.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/using.html">using operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">using</span><span class="o">&lt;</span><span class="kt">R</span><span class="p">:</span> <span class="kt">Disposable</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">resourceFactory</span><span class="p">:</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">R</span><span class="p">,</span> <span class="nv">observableFactory</span><span class="p">:</span> <span class="kt">R</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resourceFactory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Factory function to obtain a resource object.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>observableFactory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Factory function to obtain an observable sequence that depends on the obtained resource.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence whose lifetime controls the lifetime of the dependent resource object.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFe7RxSwiftRxs17SignedIntegerTyperCS_10Observable5rangeFT5startx5countx9schedulerPS_22ImmediateSchedulerType__GS1_x_"></a>
+                    <a name="//apple_ref/swift/Method/range(start:count:scheduler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFe7RxSwiftRxs17SignedIntegerTyperCS_10Observable5rangeFT5startx5countx9schedulerPS_22ImmediateSchedulerType__GS1_x_">range(start:count:scheduler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Generates an observable sequence of integral numbers within a specified range, using the specified scheduler to generate and send out observer messages.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/range.html">range operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">range</span><span class="p">(</span><span class="n">start</span> <span class="nv">start</span><span class="p">:</span> <span class="kt">E</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">E</span><span class="p">,</span> <span class="nv">scheduler</span><span class="p">:</span> <span class="kt">ImmediateSchedulerType</span> <span class="o">=</span> <span class="kt">CurrentThreadScheduler</span><span class="o">.</span><span class="n">instance</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>start</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value of the first integer in the sequence.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>count</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of sequential integers to generate.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scheduler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Scheduler to run the generator loop on.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence that contains a range of sequential integral numbers.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable3zipu0_Rd__S_14ObservableTyped_0_S1_rFTqd__qd_0_14resultSelectorFzTwd__1Ewd_0_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/zip(_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable3zipu0_Rd__S_14ObservableTyped_0_S1_rFTqd__qd_0_14resultSelectorFzTwd__1Ewd_0_S2__x_GS0_x_">zip(_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever all of the observable sequences have produced an element at a corresponding index.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/zip.html">zip operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">zip</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke for each series of elements at corresponding indexes in the sources.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable3zipu1_Rd__S_14ObservableTyped_0_S1_d_1_S1_rFTqd__qd_0_qd_1_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/zip(_:_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable3zipu1_Rd__S_14ObservableTyped_0_S1_d_1_S1_rFTqd__qd_0_qd_1_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2__x_GS0_x_">zip(_:_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever all of the observable sequences have produced an element at a corresponding index.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/zip.html">zip operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">zip</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O3</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source3</span><span class="p">:</span> <span class="kt">O3</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O3</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke for each series of elements at corresponding indexes in the sources.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable3zipu2_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_rFTqd__qd_0_qd_1_qd_2_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/zip(_:_:_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable3zipu2_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_rFTqd__qd_0_qd_1_qd_2_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2__x_GS0_x_">zip(_:_:_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever all of the observable sequences have produced an element at a corresponding index.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/zip.html">zip operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">zip</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O3</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O4</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source3</span><span class="p">:</span> <span class="kt">O3</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source4</span><span class="p">:</span> <span class="kt">O4</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O3</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O4</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke for each series of elements at corresponding indexes in the sources.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable3zipu3_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/zip(_:_:_:_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable3zipu3_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2__x_GS0_x_">zip(_:_:_:_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever all of the observable sequences have produced an element at a corresponding index.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/zip.html">zip operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">zip</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O3</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O4</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O5</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source3</span><span class="p">:</span> <span class="kt">O3</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source4</span><span class="p">:</span> <span class="kt">O4</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source5</span><span class="p">:</span> <span class="kt">O5</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O3</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O4</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O5</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke for each series of elements at corresponding indexes in the sources.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable3zipu4_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_d_4_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_qd_4_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2_wd_4_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/zip(_:_:_:_:_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable3zipu4_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_d_4_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_qd_4_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2_wd_4_S2__x_GS0_x_">zip(_:_:_:_:_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever all of the observable sequences have produced an element at a corresponding index.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/zip.html">zip operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">zip</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O3</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O4</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O5</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O6</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source3</span><span class="p">:</span> <span class="kt">O3</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source4</span><span class="p">:</span> <span class="kt">O4</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source5</span><span class="p">:</span> <span class="kt">O5</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source6</span><span class="p">:</span> <span class="kt">O6</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O3</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O4</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O5</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O6</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke for each series of elements at corresponding indexes in the sources.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable3zipu5_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_d_4_S1_d_5_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_qd_4_qd_5_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2_wd_4_S2_wd_5_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/zip(_:_:_:_:_:_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable3zipu5_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_d_4_S1_d_5_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_qd_4_qd_5_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2_wd_4_S2_wd_5_S2__x_GS0_x_">zip(_:_:_:_:_:_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever all of the observable sequences have produced an element at a corresponding index.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/zip.html">zip operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">zip</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O3</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O4</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O5</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O6</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O7</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source3</span><span class="p">:</span> <span class="kt">O3</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source4</span><span class="p">:</span> <span class="kt">O4</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source5</span><span class="p">:</span> <span class="kt">O5</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source6</span><span class="p">:</span> <span class="kt">O6</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source7</span><span class="p">:</span> <span class="kt">O7</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O3</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O4</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O5</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O6</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O7</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke for each series of elements at corresponding indexes in the sources.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable3zipu6_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_d_4_S1_d_5_S1_d_6_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_qd_4_qd_5_qd_6_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2_wd_4_S2_wd_5_S2_wd_6_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/zip(_:_:_:_:_:_:_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable3zipu6_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_d_4_S1_d_5_S1_d_6_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_qd_4_qd_5_qd_6_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2_wd_4_S2_wd_5_S2_wd_6_S2__x_GS0_x_">zip(_:_:_:_:_:_:_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever all of the observable sequences have produced an element at a corresponding index.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/zip.html">zip operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">zip</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O3</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O4</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O5</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O6</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O7</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O8</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source3</span><span class="p">:</span> <span class="kt">O3</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source4</span><span class="p">:</span> <span class="kt">O4</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source5</span><span class="p">:</span> <span class="kt">O5</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source6</span><span class="p">:</span> <span class="kt">O6</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source7</span><span class="p">:</span> <span class="kt">O7</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source8</span><span class="p">:</span> <span class="kt">O8</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O3</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O4</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O5</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O6</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O7</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O8</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke for each series of elements at corresponding indexes in the sources.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFe7RxSwiftRxs17SignedIntegerTyperCS_10Observable8intervalFTSd9schedulerPS_13SchedulerType__GS1_x_"></a>
+                    <a name="//apple_ref/swift/Method/interval(_:scheduler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFe7RxSwiftRxs17SignedIntegerTyperCS_10Observable8intervalFTSd9schedulerPS_13SchedulerType__GS1_x_">interval(_:scheduler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an observable sequence that produces a value after each period, using the specified scheduler to run timers and to send out observer messages.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/interval.html">interval operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">interval</span><span class="p">(</span><span class="nv">period</span><span class="p">:</span> <span class="kt">RxTimeInterval</span><span class="p">,</span> <span class="nv">scheduler</span><span class="p">:</span> <span class="kt">SchedulerType</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>period</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Period for producing the values in the resulting sequence.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scheduler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Scheduler to run the timer on.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence that produces a value after each period.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFe7RxSwiftRxs17SignedIntegerTyperCS_10Observable5timerFTSd6periodGSqSd_9schedulerPS_13SchedulerType__GS1_x_"></a>
+                    <a name="//apple_ref/swift/Method/timer(_:period:scheduler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFe7RxSwiftRxs17SignedIntegerTyperCS_10Observable5timerFTSd6periodGSqSd_9schedulerPS_13SchedulerType__GS1_x_">timer(_:period:scheduler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an observable sequence that periodically produces a value after the specified initial relative due time has elapsed, using the specified scheduler to run timers.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/timer.html">timer operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">timer</span><span class="p">(</span><span class="nv">dueTime</span><span class="p">:</span> <span class="kt">RxTimeInterval</span><span class="p">,</span> <span class="nv">period</span><span class="p">:</span> <span class="kt">RxTimeInterval</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scheduler</span><span class="p">:</span> <span class="kt">SchedulerType</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dueTime</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Relative time at which to produce the first value.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>period</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Period to produce subsequent values.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scheduler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Scheduler to run timers on.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence that produces a value after due time has elapsed and then each period.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable13combineLatestu0_Rd__S_14ObservableTyped_0_S1_rFTqd__qd_0_14resultSelectorFzTwd__1Ewd_0_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/combineLatest(_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable13combineLatestu0_Rd__S_14ObservableTyped_0_S1_rFTqd__qd_0_14resultSelectorFzTwd__1Ewd_0_S2__x_GS0_x_">combineLatest(_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever any of the observable sequences produces an element.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/combinelatest.html">combineLatest operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">combineLatest</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+            <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke whenever any of the sources produces an element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable13combineLatestu1_Rd__S_14ObservableTyped_0_S1_d_1_S1_rFTqd__qd_0_qd_1_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/combineLatest(_:_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable13combineLatestu1_Rd__S_14ObservableTyped_0_S1_d_1_S1_rFTqd__qd_0_qd_1_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2__x_GS0_x_">combineLatest(_:_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever any of the observable sequences produces an element.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/combinelatest.html">combineLatest operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">combineLatest</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O3</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source3</span><span class="p">:</span> <span class="kt">O3</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O3</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+            <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke whenever any of the sources produces an element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable13combineLatestu2_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_rFTqd__qd_0_qd_1_qd_2_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/combineLatest(_:_:_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable13combineLatestu2_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_rFTqd__qd_0_qd_1_qd_2_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2__x_GS0_x_">combineLatest(_:_:_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever any of the observable sequences produces an element.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/combinelatest.html">combineLatest operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">combineLatest</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O3</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O4</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source3</span><span class="p">:</span> <span class="kt">O3</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source4</span><span class="p">:</span> <span class="kt">O4</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O3</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O4</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+            <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke whenever any of the sources produces an element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable13combineLatestu3_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/combineLatest(_:_:_:_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable13combineLatestu3_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2__x_GS0_x_">combineLatest(_:_:_:_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever any of the observable sequences produces an element.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/combinelatest.html">combineLatest operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">combineLatest</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O3</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O4</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O5</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source3</span><span class="p">:</span> <span class="kt">O3</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source4</span><span class="p">:</span> <span class="kt">O4</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source5</span><span class="p">:</span> <span class="kt">O5</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O3</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O4</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O5</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+            <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke whenever any of the sources produces an element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable13combineLatestu4_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_d_4_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_qd_4_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2_wd_4_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/combineLatest(_:_:_:_:_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable13combineLatestu4_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_d_4_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_qd_4_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2_wd_4_S2__x_GS0_x_">combineLatest(_:_:_:_:_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever any of the observable sequences produces an element.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/combinelatest.html">combineLatest operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">combineLatest</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O3</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O4</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O5</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O6</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source3</span><span class="p">:</span> <span class="kt">O3</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source4</span><span class="p">:</span> <span class="kt">O4</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source5</span><span class="p">:</span> <span class="kt">O5</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source6</span><span class="p">:</span> <span class="kt">O6</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O3</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O4</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O5</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O6</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+            <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke whenever any of the sources produces an element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable13combineLatestu5_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_d_4_S1_d_5_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_qd_4_qd_5_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2_wd_4_S2_wd_5_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/combineLatest(_:_:_:_:_:_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable13combineLatestu5_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_d_4_S1_d_5_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_qd_4_qd_5_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2_wd_4_S2_wd_5_S2__x_GS0_x_">combineLatest(_:_:_:_:_:_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever any of the observable sequences produces an element.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/combinelatest.html">combineLatest operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">combineLatest</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O3</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O4</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O5</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O6</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O7</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source3</span><span class="p">:</span> <span class="kt">O3</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source4</span><span class="p">:</span> <span class="kt">O4</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source5</span><span class="p">:</span> <span class="kt">O5</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source6</span><span class="p">:</span> <span class="kt">O6</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source7</span><span class="p">:</span> <span class="kt">O7</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O3</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O4</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O5</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O6</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O7</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+            <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke whenever any of the sources produces an element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RxSwift10Observable13combineLatestu6_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_d_4_S1_d_5_S1_d_6_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_qd_4_qd_5_qd_6_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2_wd_4_S2_wd_5_S2_wd_6_S2__x_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/combineLatest(_:_:_:_:_:_:_:_:resultSelector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RxSwift10Observable13combineLatestu6_Rd__S_14ObservableTyped_0_S1_d_1_S1_d_2_S1_d_3_S1_d_4_S1_d_5_S1_d_6_S1_rFTqd__qd_0_qd_1_qd_2_qd_3_qd_4_qd_5_qd_6_14resultSelectorFzTwd__1Ewd_0_S2_wd_1_S2_wd_2_S2_wd_3_S2_wd_4_S2_wd_5_S2_wd_6_S2__x_GS0_x_">combineLatest(_:_:_:_:_:_:_:_:resultSelector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merges the specified observable sequences into one observable sequence by using the selector function whenever any of the observable sequences produces an element.</p>
+
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="http://reactivex.io/documentation/operators/combinelatest.html">combineLatest operator on reactivex.io</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">combineLatest</span><span class="o">&lt;</span><span class="kt">O1</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O2</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O3</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O4</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O5</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O6</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O7</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="p">,</span> <span class="kt">O8</span><span class="p">:</span> <span class="kt">ObservableType</span><span class="o">&gt;</span>
+        <span class="p">(</span><span class="nv">source1</span><span class="p">:</span> <span class="kt">O1</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source2</span><span class="p">:</span> <span class="kt">O2</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source3</span><span class="p">:</span> <span class="kt">O3</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source4</span><span class="p">:</span> <span class="kt">O4</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source5</span><span class="p">:</span> <span class="kt">O5</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source6</span><span class="p">:</span> <span class="kt">O6</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source7</span><span class="p">:</span> <span class="kt">O7</span><span class="p">,</span> <span class="n">_</span> <span class="nv">source8</span><span class="p">:</span> <span class="kt">O8</span><span class="p">,</span> <span class="nv">resultSelector</span><span class="p">:</span> <span class="p">(</span><span class="kt">O1</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O2</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O3</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O4</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O5</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O6</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O7</span><span class="o">.</span><span class="kt">E</span><span class="p">,</span> <span class="kt">O8</span><span class="o">.</span><span class="kt">E</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">)</span>
+            <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Function to invoke whenever any of the sources produces an element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence containing the result of combining elements of the sources using the specified result selector function.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/ReactiveX/RxSwift" target="_blank" rel="external">Krunoslav Zaher</a>. All rights reserved. (Last updated: 2016-06-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
