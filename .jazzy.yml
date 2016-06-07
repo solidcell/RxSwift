@@ -1,0 +1,41 @@
+---
+custom_categories:
+- name: Subjects
+  children:
+  - BehaviorSubject
+  - PublishSubject
+  - ReplaySubject
+  - SubjectType
+  - Variable
+- name: Disposables
+  children:
+  - AnonymousDisposable
+  - BinaryDisposable
+  - BooleanDisposable
+  - CompositeDisposable
+  - DisposeBag
+  - DisposeBase
+  - NAryDisposable
+  - NopDisposable
+  - RefCountDisposable
+  - ScheduledDisposable
+  - SerialDisposable
+  - SingleAssignmentDisposable
+  - StableCompositeDisposable
+  - SubscriptionDisposable
+- name: Schedulers
+  children:
+  - ConcurrentDispatchQueueScheduler
+  - ConcurrentMainScheduler
+  - CurrentThreadScheduler
+  - DispatchQueueSchedulerQOS
+  - HistoricalScheduler
+  - HistoricalSchedulerTimeConverter
+  - ImmediateScheduler
+  - MainScheduler
+  - OperationQueueScheduler
+  - RecursiveScheduler
+  - SchedulerServices+Emulation
+  - SerialDispatchQueueScheduler
+  - VirtualTimeConverterType
+  - VirtualTimeScheduler

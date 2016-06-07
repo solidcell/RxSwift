@@ -13,8 +13,10 @@ function updateDocs() {
 
   set -x
   killall Simulator || true
-  jazzy -m "${MODULE}" -x -workspace,"${WORKSPACE}",-scheme,"${SCHEME}",-configuration,"${CONFIGURATION}",-derivedDataPath,"${BUILD_DIRECTORY}",-destination,"$DESTINATION"
+  jazzy --config .jazzy.yml -m "${MODULE}" -x -workspace,"${WORKSPACE}",-scheme,"${SCHEME}",-configuration,"${CONFIGURATION}",-derivedDataPath,"${BUILD_DIRECTORY}",-destination,"$DESTINATION"
   set +x
 }
+
+./scripts/update-jazzy-config.rb
 
 updateDocs Rx.xcworkspace "RxExample-iOS" "Release" $DEFAULT_IOS9_SIMULATOR "RxSwift"
