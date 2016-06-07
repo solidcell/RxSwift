@@ -20,8 +20,6 @@ category_names = %w(Subjects Disposables Schedulers)
 categories = category_names.map { |name| category(name) }
 config = { "custom_categories" => categories }
 
-print(config.to_yaml)
-
 File.open('.jazzy.yml','w') do |h|
    h.write config.to_yaml
 end
